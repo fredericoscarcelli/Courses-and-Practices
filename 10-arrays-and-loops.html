@@ -1,0 +1,60 @@
+<var><!DOCTYPE html> <!--say to browser to use a new version of html-->
+  <html>
+    <head>
+      <title>Arrays and Loops</title>
+      
+    </head>
+  
+    <body>
+      <script>
+        //Array = List of values
+        const myArray = [
+          10,
+          20,
+          30
+        ]; 
+        console.log(myArray);
+        console.log(myArray[0]);
+        myArray[0] = 15;
+        console.log(myArray[0]);
+        
+        const myArray2 = [
+          1,
+          'hello',
+          true,
+          {name:'socks',price:25,},
+          [1,2,3]
+        ]
+
+        console.log(myArray2)
+        console.log(myArray2[3])
+
+        myArray2[3].name = 'tshirt'
+        myArray2.push(100) //add a new value to array
+
+        console.log(myArray2[3])
+        console.log(Array.isArray([1,2]))
+        console.log(myArray2.length)
+
+        console.log(myArray2) 
+        
+        myArray2.splice(0,1)//remove valeu of an array (index, value quantity)
+
+        console.log(myArray2)
+
+         /*
+  i =1;
+  while(i>=5){
+    console.log(i)
+    i++
+  }
+  for (let i=1; i<=5;i++){
+    console.log(i)
+  }
+  */
+
+
+      </script>
+    </body>
+  </html>
+  </var>

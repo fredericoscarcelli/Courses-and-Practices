@@ -1,0 +1,47 @@
+<var><!DOCTYPE html> <!--say to browser to use a new version of html-->
+  <html>
+    <head>
+      <title>DOM</title>
+    </head>
+  
+    <body>   
+      <button>hello</button>   
+      <button class="js-button">Second button</button> <!--class add label to item-->  
+
+      <script>
+        //properties and methods of DOM
+
+        console.log(document.querySelector('button'));
+
+        console.log(document.querySelector('button').innerHTML);
+
+        document.querySelector('button').innerHTML = 'Changed'
+        document.querySelector('js-button').innerHTML = 'Changed second button' //need starting with the '.' (class selector of CSS)
+
+        const buttonElement = document.querySelector('.js-button')
+
+        console.log(buttonElement)
+        
+        /*
+        console.log(document.title)
+        document.title = 'Changed';
+
+        console.log(document.body);
+        console.log(typeof document.body);
+
+        console.log(document.body.innerHTML)
+
+        document.body.innerHTML = '<button>hello</button>';
+
+        Every HTML element has a property .innerHTML
+        */
+
+        /*
+        document.body.innerHTML = 'hello';
+        document.title = 'good job'
+        */
+
+      </script>
+    </body>
+  </html>
+  </var>

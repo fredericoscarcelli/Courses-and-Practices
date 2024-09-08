@@ -1,0 +1,71 @@
+<var><!DOCTYPE html> <!--say to browser to use a new version of html-->
+  <html>
+    <head>
+      <title>Arrays and Loops</title>
+      <style>
+        body{
+          font-family: Arial;
+          font-size:20px ;
+          font-weight: bold;
+          color: black;
+          background-color: white;
+        }
+        .input-style{
+          font-size: 15px;
+          padding:7px;
+        }
+        .green-button{
+        background-color:green;
+        color: white;
+        border-radius: 20px; 
+        font-weight: bold; 
+        padding:8px 15px; 
+      }
+      .red-button{
+        background-color:red;
+        color: white;
+        border-radius: 20px; 
+        font-weight: bold; 
+        padding:8px 15px; 
+      }
+        
+      </style>
+    </head>
+  
+    <body>
+      <br\>
+      <p>Todo List Pratice 1</p>
+      <br\>
+      <input id="input-one" placeholder="Todo name" class="input-style" maxlength="100px" onkeydown="handleCostKeydown(event)">
+      <button class="green-button" onclick="addArray()" >Add</button>
+
+      <div id="divList">
+      </div>
+      <br\>
+      <br\>
+      <p>Todo List Pratice 2</p>
+      <br\>
+      <input id="input-two" placeholder="Todo name" class="input-style" maxlength="100px" onkeydown="handleCostKeydown2(event)">
+      <button class="green-button" onclick="addArrayLoop()">Add</button>
+      <br\>
+
+      <div id="divList2">
+      </div>
+
+      <br\>
+      <br\>
+      <p>Todo List Pratice 3</p>
+      <br\>
+      <input id="input-tree" placeholder="Todo name" class="input-style" maxlength="100px" onkeydown="handleCostKeydown3(event)">
+      <input id="input-four" type="date" class="input-style" maxlength="100px" onkeydown="handleCostKeydown3(event)">
+      <button class="green-button" onclick="addArrayLoopDate()">Add</button>
+      <br\>
+      
+      <div id="divList3">
+      </div>
+
+
+      <script src="scripts/11-todo-list.js"></script>
+    </body>
+  </html>
+  </var>

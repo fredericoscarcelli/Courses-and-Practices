@@ -1,0 +1,138 @@
+<var><!DOCTYPE html> <!--say to browser to use a new version of html-->
+  <html>
+    <head>
+      <title>DOM Projects</title>
+      <style>
+        body{
+          font-family: Arial;
+        }
+        .subscribe-button{
+        font-family: Arial;
+        font-size:15px; 
+        font-weight: bold;
+        background-color:blue;
+        color: white;
+        border-radius: 20px;
+        width: 120px;
+        border: 2px solid black;
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
+      }
+      .subscribed-button{
+        background-color:green; 
+        color:black 
+      }
+      
+      .green-button{
+        background-color:black;
+        color: white;
+        border-radius: 20px;
+        font-weight: bold; 
+        padding:8px 15px; 
+      }
+      .titleFont{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size:20;
+        font-weight: bold;
+      }
+      a:hover {
+        color:blue;
+      }
+      .input-styple{
+        font-size: 15px;
+        padding:7px;
+
+      }
+      </style>
+    </head>
+  
+    <body>
+      <p>
+        <div class="titleFont">
+          YouTube Subscribe Button
+        </div> 
+      </p>
+      <p>
+        <button class="subscribe-button" id="subscribe" class="js-button" onclick="subscribe()">Subscribe</button>
+      </p>
+      <br/>
+      <br/>
+      <p>
+        <div class="titleFont">
+          Rock Paper Scissors Game
+        </div>
+      </p>
+      <p>
+        <a href="09-rock-paper-scissor.html" style="font-size: 20;" >Click here!</a>
+      </p>
+      <br/>
+      <br/>
+      <p>
+        <div class="titleFont">
+          Amazon Shipping Calculator
+        </div>
+      </p>  
+      <p>
+        Order <b>under</b> $40 - add $10 shipping
+        <br/>
+        Order <b>over</b> $40 - FREE shipping
+      </p>
+    <input id="input" class="input-style" maxlength="512" placeholder="Cost of order" onkeydown="handleCostKeydown(event)">
+      <button class="green-button" onclick="shippingCalculator()">Calculate </button>
+      <p id="typing"></p>
+      <div id="result"></div>
+      
+      <script>
+        String(25) //Convert number to a String
+
+        //Window is a window of page, but javascript add automatcly to the comands
+        window.document
+        window.console('test')
+        wondow.alert
+
+        function subscribe(){
+          const elem = document.getElementById("subscribe")
+
+          if (elem.innerText === "Subscribe"){
+            elem.innerText = "Subscribed"
+            elem.classList.add("subscribed-button")
+           //elem.style.backgroundColor = "green"
+          }else{
+            if (elem.innerText === "Subscribed"){
+              elem.innerText = "Subscribe"
+              elem.classList.remove("subscribed-button")
+              //elem.style.backgroundColor = "blue"
+            }
+          }
+        }
+
+        function handleCostKeydown(event){
+          if(event.key==='Enter'){
+            shippingCalculator()
+          }
+        }
+
+        function shippingCalculator(){
+          let valueInput = parseFloat(document.getElementById("input").value)
+
+          //let valueInputTest = Number(document.getElementById("input").value)
+
+          if (!valueInput){
+            alert ("Please enter with a number in the field")
+              document.getElementById("input").value = 0
+          }else{
+            if(valueInput<=40){
+              valueInput += 10
+              document.getElementById('result').innerHTML="The value is $"+valueInput.toFixed(2)
+              //document.getElementById("input").value = 0
+            }else{
+              document.getElementById('result').innerHTML="The value is $"+valueInput
+              //document.getElementById("input").value = 0
+            }              
+          }
+        }      
+      </script>
+    </body>
+  </html>
+  </var>
