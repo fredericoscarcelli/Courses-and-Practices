@@ -48,6 +48,10 @@ function play(userItem){
   localStorage.setItem('score',JSON.stringify(result))
 }
 
+function autoplay(){
+    setInterval(play(array_game[Math.floor(Math.random()*array_game.length)]), 3000);
+}
+
 function reset(){
   result.win = 0;
   result.lose = 0;

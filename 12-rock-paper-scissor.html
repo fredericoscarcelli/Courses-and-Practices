@@ -1,0 +1,49 @@
+<!DOCTYPE html> <!--say to browser to use a new version of html-->
+<html>
+  <head><!-- is not visible in page-->
+    <title>Booleans - Function - Roock; Paper; Scissors</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+
+  </head>
+
+  <body>
+    <p>
+      <div class="titleFont">
+        Rock Paper Scissors Game
+      </div>
+    </p>
+    
+    <br/>
+  
+    <div>
+      <button class="game-button" onclick= "play('Rock')" >
+        <img src="images/Rock-emoji.jpg" class="move-icon">
+      </button>
+
+      <button class="game-button" onclick= "play('Paper')" >
+        <img src="images/Paper-emoji.jpg"class="move-icon">
+      </button>
+
+      <button class="game-button" onclick= "play('Scissor')">
+        <img src="images/Scissor-emoji.jpg" class="move-icon">
+      </button>
+    </div>
+    <p>
+      <div id="text">
+      </div>
+    </p>
+    <p>
+      <div id="result">
+      </div>
+    </p>
+    <p>
+      <button class="game-button" onclick= "reset()" >Reset Score</button>
+      <button class="game-button" onclick= "autoplay()" >Auto Play</button>
+    </p>
+    <br/>
+    <a href="09-dom-projects.html">Back To Dom Projects Click Here!</a>
+    
+    <script src="scripts/09-rock-paper-scissor.js">
+    </script>
+  </body>
+</html>
