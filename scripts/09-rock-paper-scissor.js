@@ -7,7 +7,16 @@ let result = JSON.parse(localStorage.getItem('score')) || {
 };
 
 document.getElementById('result').innerHTML = `Score Result <br/> Win = ${result.win}; Lose = ${result.lose} ; Tie = ${result.tie}`
-     
+
+document.body.addEventListener('keydown', (event) =>{
+  if (event.key.toLowerCase() === 'r'){
+    play('Rock');
+  }else if (event.key.toLowerCase()  === 'p'){
+    play('Paper');
+  }else if (event.key.toLowerCase()  === 's '){
+    play('Scissor')
+  }
+});
             
 function play(userItem){
   let cpuItem = array_game[Math.floor(Math.random()*array_game.length)]
@@ -44,12 +53,25 @@ function play(userItem){
     }
   }
   document.getElementById('result').innerHTML = `Score Result <br/> Win = ${result.win}; Lose = ${result.lose} ; Tie = ${result.tie}`
-  document.getElementById('text').innerHTML = `${resultText} <br/> User choice <img src="images/${userItem}-emoji.jpg" class="move-icon">. <br/> Cpu choice = <img src="images/${cpuItem}-emoji.jpg" class="move-icon">. <br/>` 
+  document.getElementById('text').innerHTML = `${resultText} <br/> User choice = <img src="images/${userItem}-emoji.jpg" class="move-icon"> <br/> Cpu choice = <img src="images/${cpuItem}-emoji.jpg" class="move-icon"> <br/>` 
   localStorage.setItem('score',JSON.stringify(result))
 }
 
+let isautoPlay = false;
+
 function autoplay(){
-    setInterval(play(array_game[Math.floor(Math.random()*array_game.length)]), 3000);
+  if (!isautoPlay){
+      intervalControl = setInterval(()=>{
+      play((array_game[Math.floor(Math.random()*array_game.length)]), 3000);
+      }, 3000);
+
+      isautoPlay = true;
+  }else{
+    clearInterval(intervalControl)
+    isautoPlay=false;
+  }
+  
+  //if make the function () call just once
 }
 
 function reset(){

@@ -38,7 +38,12 @@ function addArrayLoop(){
 
   if(name != "" ){
     nameArray.push(name);
-    nameArray.forEach(iteratorArray);
+   // nameArray.forEach(iteratorArray);
+    nameArray.forEach((item, index, arr) => {
+      listDiv += `<p>${item}</p> `
+      //console.log(listDiv)
+    })
+
     document.getElementById('divList2').innerHTML = listDiv
     elem.value = '';
     listDiv = '';
