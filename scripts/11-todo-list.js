@@ -2,6 +2,7 @@ let nameArray = [];
 let nameArrayDate = []
 let listDiv = "";
 
+
 function handleCostKeydown(event){
   if(event.key==='Enter'){
     addArray()
@@ -88,13 +89,9 @@ function iteratorArrayDate(item, index, arr) {
   }
 
   function deleteItem(indexItem){
-   
     nameArrayDate.splice(indexItem,1)
-    
-    nameArrayDate.forEach(iteratorArrayDate);
-    
+    nameArrayDate.forEach(iteratorArrayDate); 
     document.getElementById('divList3').innerHTML = listDiv
-
     listDiv = '';
 
   }

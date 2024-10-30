@@ -17,6 +17,23 @@ document.body.addEventListener('keydown', (event) =>{
     play('Scissor')
   }
 });
+
+document.getElementById('rock-button').addEventListener('click', (event) =>{
+  play('Rock');
+} )
+document.getElementById('paper-button').addEventListener('click', (event) =>{
+  play('Paper');
+} )
+document.getElementById('scissor-button').addEventListener('click', (event) =>{
+  play('Scissor');
+} )
+document.getElementById('reset-button').addEventListener('click', (event) =>{
+  reset();
+} )
+document.getElementById('autoplay-button').addEventListener('click', (event) =>{
+  autoplay();
+} )
+
             
 function play(userItem){
   let cpuItem = array_game[Math.floor(Math.random()*array_game.length)]
